@@ -1,0 +1,426 @@
+\documentclass[12pt,english]{article}%
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{tikz}
+\usepackage{amsthm}
+\usepackage{natbib}
+\bibpunct{(}{)}{;}{a}{,}{,}
+%\usepackage[round]{natbib}
+\usepackage{graphicx}
+\usepackage{setspace}
+\usepackage{color}
+\usepackage{eurosym}
+\usepackage{cancel}
+\usepackage{amssymb}%
+\usepackage{subfig}
+\setcounter{MaxMatrixCols}{30}
+\providecommand{\U}[1]{\protect\rule{.1in}{.1in}}
+\renewcommand{\baselinestretch}{1.3}
+\renewcommand{\arraystretch}{1.2}
+\makeatletter
+\renewcommand{\section}{\@startsection{section}{1}{0mm}{-1.5\baselineskip}{0.8\baselineskip}{\normalfont\large\centering}}
+\renewcommand{\subsection}{\@startsection{subsection}{2}{0mm}{-0.1\baselineskip}{0.5\baselineskip}{\normalfont\bf\flushleft}}
+\renewcommand{\@seccntformat}[1]{\csname the#1\endcsname
+\hspace{+0mm}\large{.}\hspace{+1.9mm}}
+\renewcommand{\@seccntformat}[2]{\csname the#1\endcsname
+\hspace{+0mm}\large{.}\hspace{+1.9mm}}
+\makeatother
+\newtheorem{theorem}{Theorem}
+\newtheorem{assumption}{Assumption}
+\newtheorem{acknowledgement}{Acknowledgement}
+\newtheorem{algorithm}{Algorithm}
+\newtheorem{axiom}{Axiom}
+\newtheorem{case}{Case}
+\newtheorem{claim}{Claim}
+\newtheorem{conclusion}{Conclusion}
+\newtheorem{condition}{Condition}
+\newtheorem{conjecture}{Conjecture}
+\newtheorem{corollary}{Corollary}
+\newtheorem{criterion}{Criterion}
+\newtheorem{definition}{Definition}
+\newtheorem{exercise}{Exercise}
+\newtheorem{lemma}{Lemma}
+\newtheorem{notation}{Notation}
+\newtheorem{problem}{Problem}
+\newtheorem{proposition}{Proposition}
+\newtheorem{remark}{Remark}
+\newtheorem{solution}{Solution}
+\newtheorem{summary}{Summary}
+\bibpunct{(}{)}{;}{a}{,}{,}
+\setlength{\textwidth}{17cm} \setlength{\textheight}{22cm}
+\addtolength{\oddsidemargin}{-15mm} \addtolength{\topmargin}{-5mm}
+\renewcommand{\theequation}{\arabic{equation}}
+\setlength{\parskip}{1mm}
+\newlength{\extraspace}
+\setlength{\extraspace}{.5mm}
+\newlength{\extraspaces}
+\setlength{\extraspaces}{2.5mm}
+\def\inbar{\,\vrule height1.5ex width.4pt depth0pt}
+\font\rms=cmr12 at 12pt
+\def\ce{\relax\ifmmode\mathchoice
+{\hbox{$\inbar\kern-.3em{\rm C}$}} {\hbox{$\inbar\kern-.3em{\rm C}$}}
+{\lower.9pt\hbox{\rms $\inbar\kern-.3em{\rm C}$}} {\lower1.2pt\hbox{\rms
+$\inbar\kern-.3em{\rm C}$}} \else{$\inbar\kern-.3em{\rm C}$}\fi}
+\font\cmss=cmss12 \font\cmsss=cmss12 at 12pt
+\def\ze{\relax\ifmmode\mathchoice
+{\hbox{\cmss Z\kern-.4em Z}}{\hbox{\cmss Z\kern-.4em Z}} {\lower.9pt\hbox{\cmsss
+Z\kern-.4em Z}} {\lower1.2pt\hbox{\cmsss Z\kern-.4em Z}}\else{\cmss Z\kern-.4em Z}\fi}
+\newcommand{\refsection}[1]{
+\vspace{1mm} \pagebreak[3] \addtocounter{section}{1}
+\begin{center}
+{\large #1}
+\end{center}
+\nopagebreak
+\medskip
+\nopagebreak}
+\def\thebibliography#1{\refsection{\bf References}\list
+{\relax}{\itemsep=0pt \parsep=5pt
+\usecounter{enumiv}\leftmargin=3em\itemindent=-\leftmargin} \def\newblock{\hskip .11em plus .33em minus .07em}
+\sloppy\clubpenalty4000\widowpenalty4000
+\sfcode`\.=1000\relax}
+\let\endthebibliography=\endlist
+\newcommand{\startappendix}{
+\renewcommand{\thesection}{\Alph{section}}
+\setcounter{section}{0}
+\renewcommand{\theequation}{\thesection.\arabic{equation}}}
+\newcommand{\newappendix}[1]{
+\vspace{3mm} \pagebreak[3] \addtocounter{section}{1} \setcounter{equation}{0}
+\setcounter{subsection}{0}
+\begin{center}
+{\large Appendix \thesection. #1} \vspace{0mm}
+\end{center}
+\nopagebreak \vspace{-1mm}
+\nopagebreak}
+\makeatother
+
+\newenvironment{jan}{\color{red}{ }{}}
+
+\begin{document}
+
+\title{Can cream-skimming encourage prevention?\thanks{I am very grateful to Prof. Jan Boone for his thoughtful guidance that helped me to gain a greater insight into the topic. I deeply appreciate the efforts and attention that he devoted to my project.}}
+\author{Hana Marie Smr\u{c}kov\'{a}} \maketitle
+
+\begin{abstract}
+\noindent This thesis investigates whether cream-skimming practices by health care insurers can increase the level of sport-related prevention undertaken by the insured. To determine the answer, I firstly consider a market with allowed risk rating and a market with required community rating, and derive the contracts offered by the insurers to the insured on each of these markets. In particular, I show that, under specified conditions, insurers operating in the community rating market are motivated to practice cream-skimming, i.e. to attract the healthier -- and thus more profitable -- insured; One way to attract such insured is to offer them prevention-related benefits, such as a fitness membership. Next, I compare the levels of prevention induced by a risk-rated contract and by a community-rated contract with preventive benefits. My theoretical analysis shows that higher levels of prevention resulting from the community-rated contract can be expected when people suffer from bounded willpower and discount future heavily. Finally, in the last part of the thesis, I propose a field experiment designed to empirically determine whether in a real-world setting community-rated contracts with preventive benefits induce more prevention than risk-rated contracts.
+ 
+\medskip
+\noindent\textbf{Keywords:} health insurance, cream-skimming, time-inconsistent preferences, prevention, physical activity
+
+\medskip
+
+\noindent\textbf{JEL classification}: I12, I13, I18, Z2
+
+\end{abstract}
+
+\newpage
+
+\section{Introduction}
+Cream-skimming practices are a phenomenon we can observe on health insurance markets around the globe. The term refers to strategies of insurers to attract more profitable people with lower expected health care costs to their pools and, as a result, to increase their profits.  Cream-skimming is conventionally seen as a harmful practice because it can spin the “insurance death spiral”: This means that the less healthy people are concentrated into few unstable plans with escalating premiums; eventually, these high-risk people might be even excluded from buying the insurance \citep{cooper2012}. From this point of view, clearly, cream-skimming is an undesirable development.
+
+However, as I argue in this thesis, there is also a likely positive effect of cream-skimming practices. In particular, it increases the level of sport-related prevention undertaken by insured. Because healthy people are more likely to be interested in goods related to active lifestyle and physical activity, insurers often try to attract them by offering benefits like discounted or free sport participation \citep{paolucci2007}. These benefits lower the costs of sports and motivate the insured to be more active than they would be otherwise. In other words, sport is a successful marketing strategy of health insurers as well as health improving physical activity. In short, provision of sports goods by cream-skimming insurers can be seen as a provision of a type of health prevention.  
+
+The starting point of this thesis is that the level of physical activity in the population is insufficient. In fact, the lack of physical activity is currently identified as a major source of health related problems in the developed countries. To illustrate, inactivity is globally responsible for $6\%$ of deaths, which makes it the fourth most common death factor. As regards the European region, $5-10\%$ of deaths is attributable to sedentary life-style depending on the country \citep{who2002,who2009}. 
+
+As already indicated, I am in particular interested in how the level of physical activity is influenced by health insurance. The insurance mechanism pervades health markets; it therefore comes naturally to ask how it affects incentives for prevention in general and physical activity in particular. As a matter of fact, the standard economic theory relates the empirically observed lack of physical activity to moral hazard resulting from health insurance market regulations: Many societies build their health care systems around the principle of solidarity, restricting price discrimination among insured. This restriction is expected to undermine the insured's incentives to invest in prevention because their insurance premium is independent of their health status. 
+
+In contrast to this orthodox economic explanation, behavioral economics seeks the reason of suboptimal prevention in the bounded willpower of people resulting from their time-inconsistent preferences. Prevention is a paradigmatic case of activity to which these concepts apply: It is often related to certain immediate costs and only probabilistic future benefits; that is why people who discount the future more heavily tend to undergo a suboptimal amount of prevention \citep{brandford2010}. For instance, exercising takes an immediate effort while its benefits are observable only in the longer run. Consequently, individuals with bounded willpower fail to take optimal prevention, which increases their future health care expenses. If this theory is correct, cream-skimming insurers can nudge their insured towards a higher level of sport-related prevention and consequently help to mitigate self-control problems of insured.  
+
+The two discussed explanations of the suboptimal level of physical activity have different implications for the design of health insurance systems. The moral hazard argument, on the one hand, understands regulation as a cause of the trouble. As a basis for cream-skimming, on the other hand, regulation might rather be a remedy if low physical activity results from time-inconsistent preferences. In this vein, the aim of this project is to contribute to the health-insurance debate and to suggest which type of insurance policy induce people to be more physically active. Particularly, the research question of this thesis is whether community rating with cream-skimming induces more physical activity than a risk-rating health insurance setting. Definitions of these standardly considered health insurance market settings are provided below.
+
+\subsection{Literature background}
+
+To engage the issue comprehensively, I employ two streams of literature. The first stream is related to the functioning of health insurance markets and cream-skimming. Models of insurance market are, in general, highly influenced by the seminal work of \citet{rotschild1976} who derived the equilibria for competitive insurance markets under perfect and imperfect information. Their fundamental findings are still highly valuable as a starting point for contemporary research. In particular, they provide a valuable framework for the comparison of the outcomes of unregulated and regulated markets. 
+
+\citet{deven2003} place the health insurance market environment into the context of the current situation in Europe. Importantly, they discuss the role of insurance regulation as a solidarity tool to achieve better accessibility of health care. On the other hand, premium regulation that aims to achieve cross subsidies from healthy to unhealthy people creates predictable losses and gains for the insurer. Consequently, the insurer is  motivated to practice cream-skimming. In order to prevent insurers from cream-skimming, solidarity-based insurance needs to be accompanied by a risk adjustment scheme that exactly compensates insurer for the expected health care costs of an individual. By empirical analysis, the authors, however, show that those schemes worked poorly in the European countries at the turn of the millennium. This is given mainly by the fact that premium subsidies are practically adjusted for only relatively poor predictors of future health expenses \citep{ellis2000}. To illustrate, \citet{deven1997} found that using age and gender for risk-adjustment would reduce the range of RR-based individual payments only by 20 percent. As a result, the incentives for cream-skimming are merely reduced, but not completely eradicated. On top of the imperfect risk-adjustment scheme, \citet{douven2006} stress that the motivation to cream-skimming was even strengthened by the effort to induce strong price competition to the health insurance markets that some countries made in 1990s in order to reach higher efficiency. On competitive health insurance markets, there is only a low profit pillow left to cross-subsidize different risk groups and to cover possible losses. 
+
+\citet{paolucci2007} elaborate cream-skimming more in detail. They create the conceptual framework to identify conditions under which cream-skimming is likely to occur. The paper discusses the role of supplementary health insurance as a possible tool for risk selection. Specifically, it points out that sport-related benefits can be found in supplementary insurance packages that are meant to attract healthy people. This statement is also supported by the findings of \citet{cooper2012} who compared the pools of insured in the Medicare Advantage program plans that started to provide fitness membership with the pools of matching plans without such membership. They found that after this practice was introduced, the new enrollees were of significantly lower health risk type while the composition of the control plans' pools stayed unchanged. This evidence strongly suggests that the provision of sport-related benefits is a successful cream-skimming practice.\footnote{Since the authors compared only new enrollees, there is no evidence whether the fitness membership somehow influenced the health status of the original enrollees.} 
+
+Second, I focus on literature discussing individual incentives to undertake prevention. In particular, I pay special attention to the experimental evidence regarding physical activity. This debate is closely related to the topic of time preferences and self-control problems that is extensively covered by behavioral economists. Behavioral economics reveals the human tendency to grab immediate rewards but to avoid immediate costs. This inclination is also called present bias and forces people to maximize present utility while the future utility is over-discounted. An example of classical mechanism causing behavior that is biased towards present is quasi-hyperbolic discounting. (\textit{see e.g.} \citealp{odongue1999,frederick2002,laibson1997, benhabib2010}). 
+
+People that suffer from quasi-hyperbolic discounting of their lifetime utility have higher discount rates in the short run than in the long run. To illustrate, people put off the exercise today but plan to begin tomorrow. When tomorrow comes, the present bias causes that the situation repeats. Thus, the preferences are time-inconsistent. In other words, present bias causes self-control problems. \cite{newhouse2006} discusses the existence of self-control problems directly in the context of health insurance. He observes that it may induce people to undertake lower preventive effort or compliance with the prescribed regiments than would be optimal. As a consequence, the future health care costs increase. To empirically test the relation between time preferences and the level of prevention, \cite{brandford2010} examined the preventive effort (recent mammograms, breast exams, pap smears, prostate exams, cholesterol testing, flu shots, and dental visits, and non-smoking status) of more than a thousand of participants of Health and Retirement Survey that included also a time preference module. Similarly to the theory, he found that time preferences may be a substantial barrier for people's propensity to undertake prevention. 
+ 
+At the same time, the work of \cite{thaler2009} suggests that it is possible to gently push people to pursue their long run goals in decisions with immediate costs and future benefits (e.g. saving, health, retirement and education) by small changes in the environment. A nice prevention-related example how this nudging works is provided by \citet{charness2009} who offered financial rewards for exercising to the participants of their experiments. They found that subsidizing fitness membership can create a habit among previously non-exercising people and enhance their health. 
+
+\subsection{Structure of the thesis} 
+In Section 2, I first derive the market equilibria and resulting contracts for a regulated and an unregulated health insurance market. The term regulation stands for the requirement that each insurer has to offer the same contract to all its insured at a uniform premium regardless of their health risk (community rating, CR). As a natural counterpart, I identify as unregulated the market where insurers are free to set the premium individually to each enrollee according to her health risk (risk rating, RR). The analysis is based on the Rothschild Stiglitz model \citep{rotschild1976} that allows to make inferences about outcomes of both types of health insurance markets. Based on this model, I argue that cream-skimming (i.e. provision of sports-related benefits) occurs when the requirement of uniform premium is accompanied by the imperfect risk-adjustment schemes. On such regulated markets, insurers have incentives to attract insured with a low health risk and, therefore, they cream-skim.
+
+Next, in Section 3, I discuss what incentives regarding  physical activity are held by the insured who face contracts offered on the regulated and unregulated market. Regardless of what the market setting is, each enrollee has her own intrinsic motivation to invest in prevention and be active that is given by the utility gain from retaining good health. Unlike the CR setting, risk-rated premium provides an additional monetary incentive; the healthier an individual is, the lower premium she pays. Since the CR premium is not derived from the individual's health risk, this monetary incentive disappears and moral hazard arises. On the other hand, when a CR insurer is motivated to skim the healthy insured, in fact, it introduces a (indirect) monetary incentive again. Now, however, being healthy does not directly save money from the premium but makes the future health utility gain cheaper. In this section, I further show that the role of time-preferences is crucial in determining whether the direct monetary incentive provided by a RR contract induces a higher level of prevention than this indirect monetary incentive provided on the regulated market with cream-skimming (CRCS). The RR setting produces contracts that motivate people to undertake sufficient prevention when people do not discount the future; RR contracts fail however when people discount future heavily. In the latter situation, in contrast, CRCS contracts can induce higher levels of prevention.
+ 
+Finally, in Section 4 I engage in an empirical inquiry into the effects of direct versus indirect monetary incentives on the level of physical activity. Instead of proceeding all the way and offering empirical evidence about these effects, I propose a field experiment designed to generate such evidence.\footnote{I would like to run the experiment as a part of my doctoral project.}  I divide participants into two different treatments, each of them imitating the incentives that insured face under one contract of interest (RR or CRCS). All participants obtain a fitness wristband that monitors their physical activity for three months. The collected data would allow me to conclude whether the RR or the CRCS market setting induces more physical activity. 
+
+\section{Three equilibria on the regulated health insurance market}
+As explained, this thesis studies the effects of cream-skimming on the conduct of the insured. To be able to study the effects it is necessary to specify also the alternative scenarios; in particular it is necessary to specify the alternative insurance contracts that the insured can be offered. Because the contracts offered at a particular market are products of its structure, and because health insurance markets may have many different structures depending on whether and how they are regulated, the study must start with an analysis of the different market structures and the contracts that they result into. Following the custom, the analysis assumes that there are two groups of the insured, each of which contains people with identical health risk: high risk types (HR) and low risk types (LR)
+
+In this section, I present three different situations that can each evolve as an equilibrium on the market where full health insurance is mandatory: The first situation is represented by separating equilibria that occur under risk rating (RR). The second situation corresponds with pooling equilibrium under community rating (CR). Finally, I extend the CR to the situation when insurers are motivated to select the insured according to their risk, and engage in cream-skimming (CRCS); this situation also results into separating equilibria: each insurer offers two types of contracts where the first contract, meant for HR, is offered for a fair price while the second one, meant for LR, includes sport-related supplementary services and costs slightly more than the former. I will now consider each of the three situations in detail.
+
+\subsection{Risk rating}
+To identify the equilibria, I depart from the \citet{rotschild1976} model of competitive insurance markets. My first market situation (RR) is identical with the Rotschild and Stiglitz's case of symmetric information. Under this setting, both the insurer and its client know the probability of a sickness occurrence and associated health care costs. The expected profit of the insurer for a given client is its revenue from the collected premium $(\gamma)$ less the expected expenditures on the health care of an individual $(\pi)$. For the purpose of this thesis I additionally assume that full health insurance is mandatory for all citizens. Note, nevertheless, that the outcome of the RR is not influenced by this extra assumption at all.
+
+For a risk neutral insurer to break even, the profit has to be at least equal to zero. Since in the Rotschild-Stiglitz model many identical insurers operate on the perfectly competitive market, this condition holds with equality. In other words, insurer has to offer an exactly fair insurance and realizes zero profit. Consequently, the premium under RR is given by the expected health care costs for each individual according to her type $j$ \textit{(j=l,h where l=LR and h=HR)}.
+ $$\Pi=\gamma^j-\pi^j$$ 
+$$0=\gamma^j-\pi^j$$
+$$\gamma^j=\pi^j$$
+
+\subsection{Community rating}
+The real world situation on the health insurance markets in many European countries, however, looks differently: Insurance companies are prohibited from adjusting premiums  charged to individuals according to the risk of each individual; they are required to charge each enrollee a uniform premium instead (CR). This requirement follows mainly from the fact that the solidarity principle is highly valued in Europe \citep{deven2003}. As a consequence, it is considered  fair that healthier people subsidize the less healthy by paying the same premium. One of the most often repeated arguments justifying this redistribution is that, to a large extent, health is beyond an individual's control and risk-based premiums would unjustly burden people suffering from a poor health status \citep{zweifel2009}. Eventually, the argument continues, the RR premiums might rise so high that ill people would even be unable to buy the insurance at all \citep{cooper2012}. Hence, such uniform price is seen as a solidarity tool that is supposed to improve the affordability of health insurance and, consequently, also health care to the population. 
+
+Consider the case where the uniform premium is enacted. Again, insurers operate on a competitive market and thus sell their insurance for a premium ensuring that their expected profit is zero. There is, however, a difference from the RR market: When setting the premium the insurer has to count with the weighted average of expected health care costs of all its insured instead of setting the individual premium equal to the expected costs of the particular enrollee. Assume that there is a share $\lambda$ of LR in the insurer's pool whose expected health care costs are $\pi^l$ while the costs of the rest $(1-\lambda)$ are $\pi^h$. Thus, the insurer knows that in $\lambda$ cases it has to pay $\pi^l$ and in the rest $\pi^h$. In order to follow the uniform premium rule and break even at the same time, the insurer needs to set the uniform (or pooling) premium $(\gamma^P)$ at the sum of $\pi^l$ and $\pi^h$, each of them being weighted by the share of the respective risk type in the pool.
+
+$$\Pi=\gamma^P-\lambda\pi^l-(1-\lambda)\pi^h$$ 
+$$0=\gamma^P-\lambda\pi^l-(1-\lambda)\pi^h$$
+$$\gamma^P=\lambda\pi^l+(1-\lambda)\pi^h$$
+
+An important effect of perfect competition on the health insurance market is that the pooling premium has to be exactly the same for each insurer and that it reflects the health status of the underlying population rather than the pool of the specific insurer. This result follows from the fact that if any insurer sets a higher premium than the others, nobody would buy its contract. To illustrate, consider the health insurer who operates in an environmentally deprived area where pollution causes local health care expenditures to be on average higher than in the rest of the country. Thus, this insurer can expect that its pool is riskier than the underlying population and set a higher premium for all its insured. In this case, however, the enrollees change their insurer and enter into a less expensive contract with one of the other insurers. There, consequently, the premium has to grow slightly. The situation repeats until the premium, in the end, stabilizes at a pooling equilibrium corresponding with the characteristics of the whole population.
+
+
+\subsection{Community rating with cream-skimming}
+The solidarity goal behind community rating is to induce implicit cross-subsidies from low-risk types to high risk types. Consequently, community rating creates (short run) predictable losses for insurers on their HR types and, on the other hand, predictable gains on LR individuals. Then, an insurer is motivated to select risks. As a result, the pooling arrangements might be broken and replaced by separating contracts particularly interesting for each risk group \citep{deven2003}.
+
+To prevent insurers from cream-skimming LR types, solidarity-based health insurance needs to be accompanied by a risk adjustment scheme. Such a scheme guarantees that no insurer faces any predictable losses or gains as a result of having a disproportionately risky pool. In general, the scheme aims to redistribute money between insurers in order to compensate each insurer exactly for the expected health care costs of an individual. Unfortunately, the risk-adjustment schemes introduced in reality are often imperfect. This is caused mainly by the fact that adjustment schemes work with relatively poor predictors of future health expenses \citep{ellis2000}. As a result, the incentives for risk selection are merely reduced, not eradicated.
+
+In order to make risk selection at least more difficult, community rating is usually complemented also by the requirement of open enrollment. Although it prevents insurers from simply refusing unprofitable applicants, softer forms of selection are not prohibited. This is given by the fact that it is difficult to demarcate the line how unified the insurance coverage should be. By unification I mean to what extent the same health care services should be covered by all contracts on the market and, in particular, whether an insurer is allowed to offer some extra services to its insured. The variation in insured's preferences is an important argument in favor of the supplementary insurance allowance. If the insured are risk-averse, they may want to insure also for the heath care costs that are not covered by the basic package. On the other hand, supplementary health insurance opens the possibility for risk selection if it is bought from the same insurer as the basic package \citep{paolucci2007}. 
+
+Insurers try to exploit non-price risk heterogeneity in two ways. They may either try to attract healthy people, for instance by offering a supplementary insurance package with benefits particularly interesting for them, or to deter sick people, e.g. by contracting with health care providers of poor quality in treating chronic illnesses \citep{deven2003}. The threat of the latter is widely recognized and can be partially solved by s policy setting a standard basic care package. To demonstrate, all private plans participating in the Medicare Advantage program must offer coverage that is equivalent in value to the standard package \citep{cooper2012}. In contrast, as outlined above, the question how to regulate the supplementary services attracting healthy people is more complicated. Consequently, for insurers it is easier to select risks by attracting healthy people. A strategy often used by insurers to select profitable risk types is to offer to the insured insurance products or benefits that are related to sport \citep{paolucci2007}. As a matter of fact, sport is an ideal cream-skimming tool because it camouflages the true incentives of the insurer -- to attract the LR -- behind the veil of socially desirable effort to promote prevention. 
+
+How does this finding affect the health insurance market equilibrium? Knowledge of a reliable cream-skimming tool enables insurers to design an alternative more expensive contract that is particularly interesting only for LR types. Therefore it separates both groups into two pools with distinct packages sold for different prices.\footnote{Note that the requirement of open enrollment and uniform price for each insured within a contract is satisfied.} In particular, an insurer knows that, in comparison to the original package, LR types derive higher additional utility from the access to sport facilities than HR types $(\Delta{u_s^l}>\Delta{u_s^h};$ \textit{where $u_s$ stands for the utility from the contract with sport-related benefits)}. Thus, if the insurer offers the new package with the price markup $(\epsilon)$ that is still lower than LR types' willingness to pay for sport-related benefits but higher than willingness to pay of HR types, it can successfully select types. Formally, an insurer has to select the markup $\epsilon$ that satisfies the condition:  $$ u_s^l(\gamma+\epsilon)>u^l(\gamma) \wedge u_s^h(\gamma+\epsilon)<u^h(\gamma)$$  
+
+As a result, a cream-skimming insurer offers two contracts for price $\gamma^h$ and $\gamma^h+\epsilon$. The former premium belongs to the pool of insured buying a contract without sport-related benefits who revealed themselves as HR types. Consequently, the actuarially fair pooling premium for their contract is no longer $\gamma^p$ but $\gamma^h$. As mentioned above, the contract for the less risky pool must be more expensive to enable separation. These contracts lead to the profit that amounts to the difference between the premium on the one hand and the expected health care costs and the costs of the sport related benefits on the other hand ($\gamma^H+\epsilon-\pi^L-c_{sport}$). Note that these separating equilibria are stable: Perfect competition ensures that an insurer cannot increase its profit by exploiting consumer surplus of LR types even if their willingness to pay is high and $\epsilon$ has the lowest sufficient value to discourage HR types. Nevertheless, it is not profitable for any insurer to offer any alternative contract with $\gamma^a<\gamma^h$. By doing so, it would attract all the HR types for sure and only a part of LR for whom this contract brings higher utility than their initial insurance with sport-related benefits $(u_s^l(\gamma^h+\epsilon)<u^l(\gamma^a))$. For the sake of completeness, $\lambda\pi^l+(1-\lambda)\pi^h+c_{sport}>\gamma^h$ (\textit{where} $\gamma^h=\pi^h$) is required to hold in order to exclude the possibility that a pooling contract is more profitable for an insurer than a separating contract with cream-skimming due to high costs of sport-related benefits.
+
+\subsection{Preventive benefits in the risk-rated contracts}
+The main proposition of this thesis is that cream-skimming -- as a side-effect of the CR setting -- can induce a higher level of prevention than RR. For this proposition to hold, it is sufficient to show that cream-skimming occurs exclusively under the CR setting. In order to properly investigate this issue in detail, I firstly discuss whether a RR insurer has an incentive to engage in cream-skimming. Secondly, I seek for a different motivation for insurers to offer preventive benefits. Namely, I discuss the possibility that insurers offer prevention in order to decrease the health-care costs of their enrollees.
+
+Let me start with the question whether there are any incentives for RR insurers to practice cream-skimming. Under the RR setting, as presented above, insurers face neither predictable losses nor gains. Any predictable losses due to market setting are excluded because the insurer can offer contracts based on the insured's risk type. Consequently, it always breaks even in expectations. In the same vein, no predictable gains caused by the market setting can occur. Since there is no requirement for uniform premium, unlike under CR, and each enrollee pays according to her risk, all insured are equally (zero) profitable by definition. 
+
+Another type of incentive to provide preventive benefits might follow from the reduction of the expected health care costs that takes place after the RR premium is set. In other words, an insurer could try to induce its insured to become healthier in order that it pays less for their health care and thus makes profit. To illustrate, an overweight individual is offered a contract including sport-related benefits that induces her to start exercising and reduce her weight. Consequently, her actual health care costs will be lower than those that were expected based on her health status when she signed the contract. Nevertheless, in equilibrium insurers make no profit on the insured from their improved health state. The main reason is that competition drives the premium for prevention-including contracts to the amount that is based on the expected health status of an individual that takes into account the future prevention rather than on her fitness on the day of signing the contract.
+
+As a matter of fact, the same reasoning applies also to the use of preventive benefits in order to improve the health condition of the insured under CR. Also here the insurers on the competitive market gain no long-run profit from making their insured healthier and are thereby not incentivized to provide them with prevention. As a result, on the considered health insurance markets, the only incentive to provide prevention relates to cream-skimming. Because cream-skimming makes sense only on a CR market, the difference in the physical activity induced by provision of preventive benefits under RR and CR corresponds to the physical activity resulting from cream-skimming of CR insurers.
+
+\section{Insured's decision about the level of prevention}
+After the three main contract types -- RR contract, CR contract and CRCS contract -- are derived, it is possible to proceed to the examination of the behavioral response of enrollees. Their decision about the level of prevention under each of these different contracts can be represented by the following two-period model. Assume that all individuals live for two periods and that they derive their utility directly from their health status. $H^j$ denotes expected health for type $j=l,h$ and $U(H^l)>U(H^h)$. Further, $Y$ is the lifetime income that an insured can consume. In the first period all people are born as LR types. Each individual knows that with some probability $p$ she stays healthy for the second period. This probability is influenced by the level of prevention she takes in the first period. However, prevention is costly; that is to say that income needs to be used on it instead of on consumption. Let $c(p)$ denote the cost function of this prevention that is increasing and convex $(c'(p),c''(p) >0)$. In the second period, an individual does not take any prevention since she will die anyway at the end of the period. At the beginning of each period an individual is obliged to buy full insurance at premium $\gamma$.
+
+In general, the lifetime expected utility of an individual consists of the utility in period one plus discounted expected utility in period two. Each individual derives it from income (Y) less premium in a given regime $\gamma^r$ $(r=l, h, P)$, less investment in prevention and plus good health status in the first period. In the second period, an individual's expected utility is the probability of good or bad health times the utility from good or bad health. In particular, the utility from staying in good LR state is $U^l=H^l-\gamma^r$; in contrast, $U^h=H^h-\gamma^r$ represents the utility in the case of illness. Since the probability of staying in the good health state is determined by the level of prevention, the privately optimal level of prevention is obtained by the maximization of expected utility with respect to this probability. The resulting first order condition represented by the equation (1) shows that an individual will invest in prevention until the marginal increase in costs is equal to the discounted utility gain of prevention. Note that the difference in utilities depends on the contracts offered on the health insurance market; in particular it depends on the way how the premium is set.
+$$EU=Y-\gamma^r-c(p)+H^l+\delta[pU^l+(1-p)U^h]$$
+$$\frac{\partial{EU}}{\partial{p}}=-c'(p)+\delta(U^l-U^h)$$
+$$0=-c'(p)+\delta(U^l-U^h)$$
+\begin{equation}
+c'(p)=\delta(U^l-U^h)
+\end{equation}
+
+\subsection{Level of prevention under various contracts}
+  
+First consider the situation in a RR market. In this market, an individual pays a fair premium that is adjusted to her risk-type $(\gamma^h>\gamma^l)$. In period one, the individual is always a LR type and therefore pays premium $\gamma^l$. In period two, she can either stay a LR type and still pay $\gamma^l$, or she can become a HR type and, thus, newly pay $\gamma^h$. As a result, the utility of staying in the LR state is $U^l=H^l-\gamma^l$, whereas $U^h=H^h-\gamma^h$ represents the individual's utility in case of illness. The first order condition shows that under RR, the level of prevention is increasing in the difference between the health utility gains $(\Delta{H}=H^l-H^h)$ as well as in the monetary savings resulting from the difference between the premiums $(\Delta\gamma=\gamma^h-\gamma^l)$.   
+\begin{equation}
+c'(p)=\delta(\Delta{H}+\Delta\gamma)
+\end{equation}
+
+
+Second, there is the CR market. Here all insured pay the pooling premium ($\gamma^{P}$) regardless of their risk type. The fact that the premium is independent from the risk type means that the only motivation that an insured has to improve her health by taking preventive measures is the utility that she derives from the health itself. To specify, as shown in the equation below, an individual is motivated to invest into the prevention only until marginal costs of prevention equal to marginal health utility gain. In other words, in contrast to RR, the monetary incentive disappears. Consequently, RR dominates CR as regards the level of prevention. 
+
+\begin{equation}
+c'(p)=\delta(\Delta{H})
+\end{equation}
+
+The third identified equilibrium is a CR market with cream-skimming insurers. On this market, insurers charge a uniform premium to all their insured and, at the same time, give away a sport-related benefit $b$.\footnote{For the sake of clarity, this benefit times costs of prevention gives the costs of sport beared by cream-skimming insurer in the previous section: $c_{sport}=bc(p)$} CRCS brings a higher level of prevention than pure CR because it again introduces a monetary aspect to being HR compared to LR. Viewed from another perspective, if an individual is healthy and eligible for the contract that is meant for LR types, this contract reduces her price for the future health utility gain. Thus, from the social point of view, also CRCS dominates CR regarding the level of prevention.  
+
+\begin{equation}
+c'(p)=\delta\frac{(\Delta{H})}{(1-b)}
+\end{equation}
+
+Note that the first order condition (4) is not entirely precise. So far, I have considered that each individual is born as a LR type and lives for two periods. In this world, however, an insurer does not have any incentive to skim in the first period when every insured is LR. To model the situation precisely, it would be necessary to consider a model of overlapping generations. Unlike the presented framework, the overlapping generations model would consider three types of insured in the first period (old HR, old LR and young LR) and thus the insurer would be motivated to select risk. Nevertheless, since the technical problem of the presented framework has no effect on the outcome, I stick to it for the sake of simplicity.
+
+\subsection{The effect of discounting on the level of prevention under RR and CRCS}
+Prevention in general and sport in particular is seen as an important social tool to promote public health. Public bodies across the developed countries support sport activities of their citizens \footnote{See e.g.  \citet{who2011, who2003}}. From this perspective -- as shown in the previous subsection -- both RR and CRCS dominate CR. However, the relationship between RR and CRCS is ambiguous. Does CRCS outperform RR? Below I show that the answer depends on the factor $\delta$ by which the insured discount their future. 
+
+Assume that the government considers that citizens should take care about their future seriously and that the correct discount factor is (close to) 1. Consequently, insured with $\delta=1$ undertake the socially optimal level of prevention under RR where beside the utility from health also the expected health care costs are reflected. In other words, RR contract in the world where the insured have $\delta=1$ constitutes the first best outcome. Surely, technically it is possible that the level of prevention is higher under CRCS than under RR when sport-related benefits are extensive enough. However, it seems plausible that under RR an individual chooses the most cost-efficient way how to retain good health and any additional prevention is redundant. Similarly, in case when the level of prevention is equal but composited from different preventive matters than insured would buy themselves under RR, the level of prevention is optimal but necessarily more expensive and thus cost-inefficient. The only situation where CRCS scores equal to RR is when the insurer offers people exactly the same preventive matters that they would buy themselves under RR.
+
+However, the condition $\delta=1$  is likely to be violated on the markets related to health. In the case when people are impatient and $\delta<1$, RR prevention level is no longer socially optimal since people discount the future utility gains from today's investment in prevention. In other words, they are willing to invest less of their current money in order to induce better health state in the following period. Now, it is possible to see the CRCS setting as a kind of nudging device; the money taken from the LR types in one period prepay the cheaper prevention in the following period. Thus, cream-skimming reduces price of the future good state and consequently it is more likely that the future utility gains will outweigh current costs of prevention. CRCS outperforms RR and shifts the prevention level closer to the first best outcome if the insurer pays the sufficient share of prevention costs; or, in other words, if $b$ is close enough to 1 as can be seen from equation (4). 
+
+\section{Experimental design of Insurance Game}
+In this chapter I propose the design of a field experiment that aims to test whether people employ more sport-related prevention under CRCS than under RR. The data (hypothetically) obtained by running the experiment would provide an important insight into the prevention-related behavior of the insured. The field experiment method was chosen because I believe that it best fits the nature of the research question. In particular, the time dimension -- embodied in $\delta$ -- plays a crucial role in the insured's decision about the level of prevention. For this reason, the length of the experiment is three months. I believe, that it is enough to simulate the long-run trade-off between future health and (potentially) premium savings although the real health benefits usually occur in the more distant future (in years or even more). 
+
+There are practical reasons why to constrain the length of the experiment. The budget I suppose to have suffices to reward people only for a relatively short participation. I count that this experiment will cost up to \officialeuro20,000. This amount is supposed to cover material requirements -- mainly the fitness wristbands -- and financial rewards paid to the participants. In particular, the market price of the wristband is slightly below \officialeuro100 each. Since there will be 105 participants in total, I count that the wristbands will cost approximately a half of the budget (\officialeuro10,000). The remaining half is allocated to the financial rewards (ranging from \officialeuro4,200 to \officialeuro5,600), show up fees (\officialeuro525), to gym memberships (up to \officialeuro4,000\footnote{The resulting amount is dependent on the prices of sport memberships in country and university where the experiment takes place. For instance, Tilburg university provides sport facitilites of high quality for only \officialeuro21 monthly. For this price, the budget required is \officialeuro2205.}) and to the salary for experiment assistants if necessary. To compare, probably the most famous RAND Health Insurance Experiment \citep{newhouse1993} lasted for 15 years and cost roughly 295 million in 2011 dollars \citep{greenberg2004}. The constrained length can, however, be seen as an advantage from a particular perspective: the results of the experiment can be available relatively fast. Since the health insurance debate is very hot nowadays, even the limited piece of evidence can contribute to it.       
+
+\subsection{Subject recruitment and time-frame}
+I invite students as research subjects of this experiment. The first session takes place one week before the actual experimental phase starts (Figure 1 represents the complete time-line). To avoid self-selection, the recruitment materials do not contain any mention of physical fitness or exercise. The title of the experiment is Insurance Game and the announcement provides participants only with a notice about the length of the experiment and a requirement of three visits in the laboratory. The subjects are promised a disposable show up fee \officialeuro5 for completing the entering session and a further reward for participating that partially depends on their personal effort but can amount to \officialeuro100.
+
+\begin{figure}
+\centering
+\includegraphics[width=0.7\linewidth]{Appendicies/Figure_1}
+\caption{Time schedule of the exeriment}
+\label{fig:Figure_1}
+\end{figure}
+
+The complete duration of the experiment is seventeen weeks. It consists of two main phases: In the first phase, subjects are recruited (four weeks); during the second phase, the Insurance Game is played (twelve weeks). The recruitment phase takes four weeks. The phase starts by inviting students via e-mail as research subjects of this experiment. Invitation is sent two weeks before the date of the introductory session. Candidates are asked to report their interest in the experiment website and enter their contact details. They are also asked whether they are not prohibited from sporting for any health-risk; if so, they are excluded from the experiment. Those people are likely to be part of the HR group in the real life. Thus, the resulting levels of the physical activity among participants can be slightly biased upwards. On the other hand, it is possible to include them in the statistics with the low level of physical activity afterwards and thus check how extensive the bias is. 
+
+At the end of the second week, subjects are randomly chosen by computer and assigned to one of these three groups: RR, CRCS and control. Enough candidates are put on a waiting list for the case that some of the chosen subjects refuse to participate. Another e-mail containing the status of the candidate (participant/substitute) is sent. Chosen participants are also provided with the details on the time and location where the first session takes place. The goal of this phase is to make sure that enough participants are recruited. In particular, the required number of subjects is 90; each group should consist of at least 30 subjects. Nevertheless, since the possibility of participant withdrawal exists, that total number of invited participants is 105 (35 per group), which creates a buffer.    
+
+The instruction session consists of three parts for all groups: survey, insurance game details, and technical part. Firstly, subjects are asked to fill in a survey asking their contact details, demographical characteristics and sports habits. Moreover, it includes several questions that enable me to identify individual time-preferences. This first step is identical for all three groups (see Appendix 1). The second part is group-specific and subjects are informed about the setting of the game they play. Beside the rules for the given group, they also obtain a detailed time-frame of the experiment. The only item that is common for all three groups in this part is the handout about the recommended level of physical activity and its benefits (Heath handout issued by the World Health Organization in 2011; see Appendix 2).
+
+In the third (technical) part, the whole group is provided with a fitness wristband that is able to track the whole-day activity of the participants and also the calories they burn. Each individual is asked to sign the consent form granting me the right to track and use their data. This device allows me to get reliable and comprehensive information about the level of physical activity.\footnote{ It will give me more reliable and comprehensive data than the experimenters had so far. For instance in the experiments run by \cite{charness2009}, the authors tracked only the visits in the university gym. Thus, the use of this new technology -- namely fitness wristbands -- expands dramatically the range of possible sport activities that participants can engage in.} On the other hand, provision of the wristband can be seen as a nudge (monetary incentive) on its own that can further bias the levels of physical activity upwards. I believe, however, that this drawback is outweighed by the quality of the data gained. I do not expect that the answer to the research question is affected because all groups are provided by the wristband. Hence, the difference between RR and CRCS should not be biased at all. Moreover, I partially fix the issue with the help of a control group. 
+
+Participants are promised that they can keep the wristband on top of their experiment payoff if they complete the experiment\footnote{
+To be sure, it would be costly to enforce the return of the wristband by people who dropped the experiment. However, in case of students who engage in an experiment officially organized by a university, it is not likely that they will be highly motivated to keep the wristband without completing the task. On the other hand, the possibility to earn the wristband can provide additional motivation to complete the experiment.} and allow me to see their statistics in the next 12 months.\footnote{Information from the after-experiment period can contribute to the examination of habit creation.} At the end of the first session, the subsequent individual appointment in the following week is set. At this meeting, each subject obtains help with customizing the wristband. Moreover, it provides an opportunity to make sure that the rules of the game are clear. This last step of the introductory session is also the same for all the treatments.
+
+After the four weeks of the recruitment stage, the real game starts. Participants' physical activity is tracked for twelve weeks. At the end of the game, participants are sent an invitation e-mail to the third meeting in the following week. At this last session, they are asked to fill the second survey regarding the change in their sport habits and give any comments regarding their participation (see Appendix 3) and they also receive the individual payoff.
+
+\subsection {Treatments}        
+
+\paragraph{RR treatment.} The game for the RR group is supposed to imitate the environment on a health insurance market where risk rating is allowed.  After the survey part is done, subjects are handed the group-specific detailed information about the experiment containing the time-frame (see Appendix 4).\footnote{The time frame is similar to the one presented in Figure 1 and, thus, it is omitted in the appendix.} They are informed that they play the role of employees in a firm and will be paid salary \officialeuro100 for participation by their employer (experimenter). The participants are also notified that health insurance must be paid out of this salary. The premium will be individually derived from their health risk at the end of the experiment. 
+
+In particular, the health risk used for the calculation of their premium will be based on the level of physical activity. Participants are given the Health handout that specifies the two -- milder and stricter -- recommended levels of physical activity. Moreover, they are informed that they are obliged to pay an extra 1 Euro for each 5\% deficit in activity compared to the milder recommended level. On the other hand, if physical activity level is higher than the milder recommendation, each 5\% of extra physical activity is awarded by the a reduction of 1 Euro. The maximum premium possible in this RR group amounts to \officialeuro40 for completely inactive individuals which is equivalent to the uniform premium paid by the CRCS group. Note that in theory, the premium for the HR type under RR is almost equivalent as the premium for the contract with sport-related benefits under CRCS since the latter is only higher by $\epsilon$.  
+
+To be sure, the incentive scheme does not simulate the situation on the unregulated health insurance market precisely. Above all, the incentive scheme is designed to be easily understandable by participants and to fit the budget limit. Firstly, I assume that the initial health state -- and consequently the basic RR premium that afterwards changes according to physical activity -- is the same for all participants. Although students are generally a homogeneous group, their individual health states likely differ. Secondly, I assume the increase (decrease) of health care costs based on the physical activity level to be linear, which is a rough approximation. On the other hand, the advantage of the incentive scheme is that it rewards participants according to almost continuously measured levels of physical activity, not only according to whether they met the recommended levels of physical activity or not.\footnote{Studies that explore the relationship bentween health care costs and physical activity usually divide participants into discrete groups based on whehter the recommended level was met or not (see e.g. \cite{carlson2015})}   
+      
+Further, also the simulation of a real trade-off between immediate costs of exercising and future health and monetary benefits is not precise because of the short time horizon. Particularly, if $\delta_{3months}>\delta_{years}$, the obtained level of physical activity is overestimated in the experiment. This bias increases more the RR levels of physical activity because it increases the discounted value of money that people can save on premium by exercising. As a result, RR is more likely to outperform CRCS with regard to physical activity than if people discount the monetary incentive more heavily. Roughly speaking, the bias works to the disadvantage of the main hypothesis I propose in this thesis. Consequently, if a higher level of physical activity is observed under CRCS than under RR even with this distortion, the results are more rather then less reliable.   
+ 
+\paragraph{CRCS treatment.} The CRCS group plays a game that imitates the environment on a health insurance market where community rating is enacted by law but insurers practice cream-skimming. Again, the session for the CRCS group begins with a uniform survey and subjects are handed group-specific detail information about the experiment containing the time-frame (see Appendix 5). Subjects in this group also play the role of employees who are paid salary for participation. However, compared to the RR group, subjects cannot affect the insurance premium they are obliged to pay; they are simply informed that a premium will be subtracted from their income at the end of the game. In contrast to the RR treatment, they are provided with a free sport-related benefit in form of a fitness membership (more options in the same monetary value). They are also given the Health handout. 
+
+For the sake of simplicity, I do not create any selection mechanism in this group. As a result, all participants are provided with free sport-related benefits instead of only LR types. To clarify, there might be participants that are selected out at the beginning of the experiment because they are prohibited to do sports. This step is taken for ethical reasons to make sure that nobody feels pushed to a potentially dangerous activity. However, this selection takes place before the randomization into groups and thus cannot be interpreted as the selection under CRCS. Instead, the activity levels for both groups are slightly biased upwards since the highest-risk types\footnote{ It seems likely that people who cannot do sports suffer for health problems and that they have higher expected health care costs relative to people without this constraint.} are excluded, but the difference between the groups is supposed to be unchanged. Nevertheless, the lack of a selection mechanism slightly biases downwards the level of physical activity in comparison to a hypothetically selected group that would consist only of LR individuals. However, students are likely to be LR in most cases and the bias is thus assumed to be negligible. Moreover, the direction of this bias is similar to the effect of the relatively short duration of this experiment; it makes it more difficult for CRCS to outperform RR. Again, it cannot cause a type I error.  
+
+\paragraph{Control group.}  To be sure, to find out whether people are more physically active under the RR or CRCS setting, a control group is not necessary. Nevertheless, the control group has a different two-tailed role in the experiment. First, the inclusion of a group that has no monetary incentive can provide valuable information about the magnitude of the physical activity ($c'(p)$) that is induced by the difference between utility from good and bad health $(\Delta{H})$. Afterwards, it is simpler to evaluate the effect of monetary incentives, namely what additional physical activity is triggered by one Euro. I assume that the randomization of subjects ensures that the difference between utility from good and bad health is on average constant among groups (when I control for demographic characteristics). Thus, to obtain the baseline level of activity associated with $\Delta{H}$, the only requirement is to provide the control group with the same information about the health benefits of physical activity and the recommended levels (Health handout).
+
+Second, the control group can help to filter out the behavioral changes induced by provision of the Health-handout and -- above all -- the fitness wristband. By introducing a control group, it is possible to check how the level of self-reported activity before the experiment differs from the data obtained during (and after) the experiment thanks to the wristband. In particular, it would be helpful to see whether the provision of wristbands as such plays a role of a nudging tool and incentivizes people to be more active.
+
+\subsection{Hypotheses}
+The data obtained from running the experiment explained above are supposed to shed light on the question whether cream-skimming contracts induce higher level of prevention than RR contracts. Firstly, I test whether the introduction of monetary incentives to both the RR and CRCS treatment provokes higher level of prevention in comparison to incentives based only on the difference in health utility for the control group. Formally, there are two pairs of tested hypotheses:\\ 
+
+\textbf{Hypothesis $0_a$:} Subjects in the RR treatment experienced the same level of physical activity as subjects in the control group during the monitored period.
+
+\textbf{Hypothesis $1_a$:} Subjects in the RR treatment experienced a higher level of physical activity than subjects in the control group during the monitored period.
+
+\textbf{Hypothesis $0_b$:} Subjects in the CRCS treatment experienced the same level of physical activity as subjects in the control group during the monitored period. 
+
+\textbf{Hypothesis $1_b$:} Subjects in the CRCS treatment experienced a higher level of physical activity than subjects in the control group during the monitored period.\\
+
+Secondly, the relationship between the level of prevention in RR treatment and CRCS treatment is tested. The third pair of hypotheses formalizes the main research question of this thesis as follows:\\
+
+\textbf{Hypothesis $0_c$:} Subjects in the RR treatment experienced a higher level of physical activity than subjects in CRCS during the monitored period.
+
+\textbf{Hypothesis $1_c$:} Subjects in the RR treatment experienced a lower level of physical activity than subjects in CRCS during the monitored period.  
+
+\section{Conclusion}  
+This thesis shows that community rating with cream-skimming can theoretically lead to greater prevention among the insured than a risk rating setting on the health insurance market. My theoretical analysis shows that a CRCS contract with sport-related benefits -- that are valuable enough -- leads to more prevention and is welfare enhancing if people suffer from bounded willpower and discount future heavily. I also propose a field experiment designed to empirically determine which of the contracts induces more prevention in a real-world setting. 
+
+In general, I examine contracts emerging on the regulated and unregulated health insurance markets. On the unregulated market, separating equilibria occur and each individual pays the premium according to her risk-type. For the purposes of this thesis, a regulated market is a market with community rating: the insurer is obliged to ask the same premium for the same contract regardless of the risk type of insured. This market setting is supposed to gravitate to the pooling equilibrium and thus to redistribute income from healthy to unhealthy individuals. The policy reasoning behind this regulation is to promote solidarity in the society and to make health care more affordable for unhealthy people. However, this regulation often motivates insurers to attract healthy people because these are more profitable for them. This practice is also called cream-skimming. A reliable selection tool is to create two different contracts and to offer sport-related benefits -- that are particularly interesting for healthy people -- in one of them. Consequently, the pooling equilibrium is undermined and insured are again separated in two different contracts. 
+
+Usually, the negative effects of cream-skimming are stressed. Namely, cream-skimming damages the effort to make health insurance cheaper for unhealthy people. In this thesis, I point out that also a positive effect can occur: provision of sport-related benefits can nudge people suffering by bounded will power to be more physically active. Thus, the sport-related benefits can be seen as a tool to promote prevention, especially in the context of serious health consequences of inactivity; to illustrate, a lack of physical activity causes around $10\%$ of deaths in the developed world. It is questionable, however, whether this positive effect is not outweighed by the moral hazard that generally arises under community rating because the premium paid by the enrollee does not depend on her health status anymore.
+
+This thesis does not provide an empirical answer whether in reality a CRCS contract induces a higher level of physical activity than a RR contract offered on the unregulated market. Instead, I propose a field experiment that can help to determine it. 
+
+\bibliographystyle{plainnat} 
+\bibliography{neco}
+\pagebreak
+\section*{Appendicies}
+\subsection*{Appendix 1: Survey 1}
+\begin{enumerate}
+	\item Please fill in your contact details:
+	\begin{enumerate}
+		\item Student number:
+		\item E-mail:
+		\item Telephone:	
+\end{enumerate}
+\item  Please indicate your gender:
+\begin{enumerate}
+\item Male
+\item Female 
+\end{enumerate}
+\item What is your age?
+\item What is your country of origin?
+\item What is the highest education achieved by your mother? \footnote{Specific wording of answer choices depends on the country where the experiment takes place.}
+\begin{enumerate}
+\item Elementary school
+\item Secondary school
+\item University (BSc, MSc)
+\item University (PhD)
+\end{enumerate}
+\item What is the highest education achieved by your father? \footnote{Specific wording of answer choices depends on the country where the experiment takes place.}
+\begin{enumerate}
+	\item Elementary school
+	\item Secondary school
+	\item University (BSc, MSc)
+	\item University (PhD)
+\end{enumerate}
+\item How many hours per week do you spend by doing moderate-intensity aerobic physical activity (aerobic sports or other physical activity e.g. walks, gardening etc.) in average?
+\begin{enumerate}
+\item 0 -- 1 hour/week
+\item 1 -- 2 hours/week
+\item 2 -- 3 hours/week
+\item 3 -- 4 hours/week
+\item 4 -- 5 hours/week
+\item More than 5 hours/week
+\end{enumerate}
+\item How many minutes per week do you spend by doing vigorous-intensity aerobic physical activity in average?
+\begin{enumerate}
+\item 0 -- 15 minutes/week
+\item 15 -- 30 minutes/week
+\item 30 -- 45 minutes /week
+\item 45 -- 60 minutes /week
+\item 60 -- 75 minutes /week
+\item More than 75 minutes /week
+\end{enumerate}
+\item Why do you participate in sports (do any other physical activity)?\\\\\\\\\\
+\item Please indicate on the scale 0 -- 10 how important it is to engage in physical activity/sports for the health reasons according your opinion (0 = not important at all; 10 = very important)?
+\item Do you follow any recommendation regarding the physical activity level (if yes, please specify)?\\\\\\\\\\
+\item You were promised to be awarded \officialeuro5 show up fee today. What amount of money would make you indifferent between these \officialeuro5 today and in: (please write down an amount in each row)?
+\begin{enumerate}
+\item one week:
+\item one month:
+\item three months:
+\item one year: 
+\end{enumerate}
+\item You were informed that your payoff in the experiment which you will obtain in (approximately) 3 months can amount to \officialeuro100. What amount of money would make you indifferent between these \officialeuro100 in 3 months and in: (please write down an amount in each row)?
+\begin{enumerate}
+\item 3 months and one week:
+\item 4 months:
+\item 6 months:
+\item one year and 3 months:
+\end{enumerate}
+\end{enumerate}
+\pagebreak
+\subsection*{Appendix 3: Survey 2}
+\begin{enumerate}
+\item Please fill in your student number:
+\item Please indicate on the scale 0 -- 10 how important it is to engage in physical activity/sports for the health reasons according your opinion (0 = not important at all; 10 = very important)?
+\item How have you changed your level of physical activity during the experiment in comparison to the level before?
+\begin{enumerate}
+\item Dramatically decreased
+\item Slightly decreased
+\item Not changed
+\item Slightly increased
+\item Dramatically increased
+\end{enumerate}
+\item What motivated you to this change?\\\\\\\\\\
+\item Please indicate on the scale 0 -- 10 how motivated are you to retain the current level of physical activity (0 = not motivated at all; 10 = very motivated)?
+\item Do you have any comments on the experiment you have participated in?
+\end{enumerate}
+\pagebreak
+\subsection*{Appendix 4: The Insurance Game -- RR group}
+Dear participant,
+
+You are a subject in an economic experiment called The Insurance Game. You play the role of the employee in The Experiment Company. At the end of the game, you will be paid a salary for your participation. The gross salary amounts to \officialeuro100. However, a health insurance premium must be paid out of your salary. The premium depends on your health risk type at the end of the game. In particular, the insurance company is interested in your level of physical activity since physical inactivity is one of the major causes of health risks in the developed world.
+
+To be able to correctly assess your level of physical activity -- and thus to find out your risk type -- you will be provided with a fitness wristband that tracks your all day activity. At the end of the game, your weekly activity will be compared with the level recommended by the World Health Organization. If you meet the \textit{milder level}\footnote{Adults aged 18 -- 64 should do at least 150 minutes of moderate-intensity aerobic physical activity throughout the week or do at least 75 minutes of vigorous-intensity aerobic physical activity throughout the week or an equivalent combination of moderate- and vigorous-intensity activity.} of recommended physical activity, your health risk is seen as moderate and an insurance premium of \officialeuro20 will be deducted from your gross salary.
+
+If your physical activity level is lower than the milder recommendation, your health risk is seen as high and an extra \officialeuro1 is deducted for each 5\% deficit in your activity compared to the premium for moderate-risk insured. To illustrate, if you are completely inactive, your premium is \officialeuro20 plus \officialeuro20 (100\%Deficit/5*\officialeuro1). Thus, your maximal premium is equal to \officialeuro40 out of your \officialeuro100 salary. On the other hand, if your physical activity level is higher than the milder recommendation, each 5\% of extra physical activity is awarded by the a reduction of the premium by \officialeuro1. Thus, if you meet the \textit{stricter level},\footnote{For additional health benefits, adults should increase their moderate-intensity aerobic physical activity to 300 minutes per week, or engage in 150 minutes of vigorous-intensity aerobic physical activity per week, or an equivalent combination of moderate- and vigorous-intensity activity.} the insurance company sees your health risk as low and you are relieved from the duty to pay the premium at all.
+
+The game starts in two weeks from now and lasts twelve weeks. Next week is reserved for individual meetings with participants where we are going to help you customize your fitness wristband and answer all additional questions. For a detailed time schedule of the experiment, please see the following page.
+\pagebreak
+\subsection*{Appendix 5: The Insurance Game -- CRCS group}
+Dear participant,
+
+You are a subject in the economic experiment called The Insurance Game. You play the role of an employee in The Experiment Company. At the end of the game, you will be paid a salary for your participation. The gross salary amounts to \officialeuro100. However, a health insurance premium must be paid out of your salary. The premium amounts to \officialeuro40. Thus, your final salary at the end of the experiment is \officialeuro60.
+
+The health insurance company is interested in your level of physical activity since physical inactivity is one of the major causes of health problems in the developed world. For this reason it decided to give you free sport-related benefits (you have a choice from variety of sport clubs memberships). To allow you – and your employer who supports this project financially – to track how it helps you to meet the physical activity recommendation given by the World Heath Organization\footnote{Adults aged 18 -- 64 should do at least 150 minutes of moderate-intensity aerobic physical activity throughout the week or do at least 75 minutes of vigorous-intensity aerobic physical activity throughout the week or an equivalent combination of moderate- and vigorous-intensity activity. For additional health benefits, adults should increase their moderate- intensity aerobic physical activity to 300 minutes per week, or engage in 150 minutes of vigorous-intensity aerobic physical activity per week, or an equivalent combination of moderate- and vigorous-intensity activity.} you will be provided with a fitness wristband that tracks your all day activity.
+
+The game starts in two weeks from now and lasts twelve weeks. Next week is reserved for individual meetings with participants where we are going to help you customize your fitness wristband and answer all additional questions. For a detailed time schedule of the experiment, please see the following page.
+\pagebreak
+\begin{figure}
+	\centering
+	\includegraphics[width=0.7\linewidth]{Appendicies/App_pdf/Appendix2_Health_handout_WHO}
+	\caption{Appendix 2: Health handout}
+	\label{fig:Appendix2_Health_handout_WHO}
+\end{figure}
+
+\end{document}
+
+
